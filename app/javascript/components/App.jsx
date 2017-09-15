@@ -8,20 +8,30 @@ class App extends Component {
        this.state = {
            productList: [
                {
-                  name: 'jonathan',
-                  id: 4,
-                  media: 'images/codeacademy.png'
-                   
-                   
-               },
-               {
-                  name: 'lala',
-                  id: 5,
-                  media: 'images/codeacademy.png'
-                   
-                   
-               }
-               
+                  id: 1,
+                  name: 'Product Hunt',
+                  link: 'https://producthunt.com',
+                  media: 'images/codeacademy.jpeg',
+                  upvote: 169,
+                  description: 'Hottest startups',
+                  maker: {
+                      name: 'Unknown',
+                      avatar: '/images/hieu.jpeg'
+                      
+                  }
+                }, {
+                  id: 2,
+                  name: 'Product Launched',
+                  link: 'https://productlaunched.com',
+                  media: 'images/codea4startup.jpeg',
+                  upvote: 200,
+                  description: 'Hottest list of products',
+                  maker: {
+                      name: 'Jonathan Li',
+                      avatar: '/images/kitty.png'
+                      
+                  }
+                }
                
                ]
        };
@@ -31,13 +41,37 @@ class App extends Component {
    }
     render(){
         return(
-            <div>
-                <h1>{this.state.productList[0].name}</h1>
-                <ul>
-                    <ProductList productList={this.state.productList}/>
-                </ul>
-
-            </div>
+            <section>
+                <section className="container">
+                    <ul className="product-list">
+                        <li className="product-item">
+                            <a className="upvote-button" href="#" >
+                                <span>
+                                    <i class="fa fa-sort-asc"></i>
+                                </span>
+                                <br/>
+                                {this.state.productList[0].upvote}
+                            
+                            </a>
+                            <img className="product-item-media" src={this.state.productList[0].media} />
+                            <section className="product-item-info">
+                                <a>
+                                    <h2>{this.state.productList[0].name}</h2>
+                                </a>
+                                <p>{this.state.productList[0].description}</p>
+                                <a href="#">
+                                    <img className="small-avatar" src={this.productList[0].maker.avatar}/>
+                                </a>
+                            </section>
+                            <a className="product-item-link" href={this.state.productList[0].link}></a>
+                            <span>
+                                <i className="fa fa-external-link"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </section>
+           </section>
+            
             
             );
         

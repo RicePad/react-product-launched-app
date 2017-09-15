@@ -7,9 +7,7 @@ class ProductItem extends Component {
            
            <div> 
                 
-                <li>{this.props.name}</li> 
-                <li>{this.props.productID}</li>
-                <li>{this.props.media}</li>
+               
 
                 
 
