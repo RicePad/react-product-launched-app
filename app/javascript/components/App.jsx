@@ -11,7 +11,7 @@ class App extends Component {
                   id: 1,
                   name: 'Product Hunt',
                   link: 'https://producthunt.com',
-                  media: 'images/codeacademy.jpeg',
+                  media: './images/codeacademy.jpeg',
                   upvote: 169,
                   description: 'Hottest startups',
                   maker: {
@@ -19,7 +19,9 @@ class App extends Component {
                       avatar: '/images/hieu.jpeg'
                       
                   }
-                }, {
+                }, 
+                
+                {
                   id: 2,
                   name: 'Product Launched',
                   link: 'https://productlaunched.com',
@@ -42,12 +44,17 @@ class App extends Component {
     render(){
         return(
             <section>
-                <section className="container">
+                <header>
+                    <img src="/images/banner.jpeg" />
+
+                    
+                </header>
+              <section className="container">
                     <ul className="product-list">
                         <li className="product-item">
                             <a className="upvote-button" href="#" >
                                 <span>
-                                    <i class="fa fa-sort-asc"></i>
+                                    <i className="fa fa-sort-asc"></i>
                                 </span>
                                 <br/>
                                 {this.state.productList[0].upvote}
@@ -58,12 +65,12 @@ class App extends Component {
                                 <a>
                                     <h2>{this.state.productList[0].name}</h2>
                                 </a>
-                                <p>{this.state.productList[0].description}</p>
+                                <p></p>
                                 <a href="#">
-                                    <img className="small-avatar" src={this.productList[0].maker.avatar}/>
+                                    <img className="small-avatar" src={this.state.productList[0].maker.avatar}/>
                                 </a>
                             </section>
-                            <a className="product-item-link" href={this.state.productList[0].link}></a>
+                            <a className="product-item-link" href={this.state.productList.link}></a>
                             <span>
                                 <i className="fa fa-external-link"></i>
                             </span>
