@@ -45,7 +45,7 @@ class App extends Component {
         return(
             <section>
                 <header>
-                    <img src="images/banner.jpeg" />
+                    <img src="images/banner.jpeg" width="100%" />
 
                     
                 </header>
