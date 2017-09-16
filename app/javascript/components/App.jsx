@@ -11,12 +11,12 @@ class App extends Component {
                   id: 1,
                   name: 'Product Hunt',
                   link: 'https://producthunt.com',
-                  media: './images/codeacademy.jpeg',
+                  media: 'images/codecademy.jpeg',
                   upvote: 169,
                   description: 'Hottest startups',
                   maker: {
                       name: 'Unknown',
-                      avatar: '/images/hieu.jpeg'
+                      avatar: 'images/hieu.jpeg'
                       
                   }
                 }, 
@@ -25,7 +25,7 @@ class App extends Component {
                   id: 2,
                   name: 'Product Launched',
                   link: 'https://productlaunched.com',
-                  media: 'images/codea4startup.jpeg',
+                  media: 'images/code4startup.jpeg',
                   upvote: 200,
                   description: 'Hottest list of products',
                   maker: {
@@ -45,38 +45,14 @@ class App extends Component {
         return(
             <section>
                 <header>
-                    <img src="/images/banner.jpeg" />
+                    <img src="images/banner.jpeg" />
 
                     
                 </header>
               <section className="container">
-                    <ul className="product-list">
-                        <li className="product-item">
-                            <a className="upvote-button" href="#" >
-                                <span>
-                                    <i className="fa fa-sort-asc"></i>
-                                </span>
-                                <br/>
-                                {this.state.productList[0].upvote}
-                            
-                            </a>
-                            <img className="product-item-media" src={this.state.productList[0].media} />
-                            <section className="product-item-info">
-                                <a>
-                                    <h2>{this.state.productList[0].name}</h2>
-                                </a>
-                                <p></p>
-                                <a href="#">
-                                    <img className="small-avatar" src={this.state.productList[0].maker.avatar}/>
-                                </a>
-                            </section>
-                            <a className="product-item-link" href={this.state.productList.link}></a>
-                            <span>
-                                <i className="fa fa-external-link"></i>
-                            </span>
-                        </li>
-                    </ul>
-                </section>
+                <ProductList productList={this.state.productList} />      
+              </section>
+                 
            </section>
             
             
