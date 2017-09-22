@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 class Popup extends Component {
+  
    renderPopupContent(){
        <section className="popup">
         <section className="popup-wrap">

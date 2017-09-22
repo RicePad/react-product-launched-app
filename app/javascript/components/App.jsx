@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProductList from './ProductList';
 import Homepage from './Homepage';
 import Navbar from './Navbar';
+import Popup from './Popup';
 
 class App extends Component {
    constructor(props){
@@ -45,12 +46,17 @@ class App extends Component {
    }
     render(){
         return(
+            
             <section>
+
                  <Navbar />
+
                  <Homepage />
               <section className="container">
                 <ProductList productList={this.state.productList} />      
               </section>
+                                <Popup />
+
             </section>
             
             
