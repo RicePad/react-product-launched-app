@@ -3,6 +3,26 @@ import Popup from './Popup';
 
 
 class Navbar extends Component {
+    constructor(props){
+        super(props);
+        
+        this.state = {
+          displayPopup: false  
+            
+        };
+        
+        
+    }
+    
+    
+    showPopup = () => {
+        return this.setState({displayPopup: true});
+        
+    }
+    
+    hidePopup = () =>{
+        return this.setState({displayPopup: false});
+    }
     
     renderProductSearch(){
         return (
@@ -16,7 +36,7 @@ class Navbar extends Component {
    
     renderLogo(){
         return (
-            <a href="#"><img src="/images/favicon.ico"/></a>
+            <a  onClick={this.showPopup} ><img src="/images/favicon.ico"/></a>
             );
         
     }
@@ -25,7 +45,7 @@ class Navbar extends Component {
     renderUser(){
         return (
             <section className="right-side">
-                <a href="#" className="login-btn">LOGIN</a>
+                <a  onClick={this.showPopup} className="login-btn">LOGIN</a>
             </section>
             );
         
@@ -43,7 +63,7 @@ class Navbar extends Component {
                 {this.renderLogo()}
                 {this.renderUser()}
             </section>
-                 <Popup />
+                 <Popup status={this.state.displayPopup} hidePopup={this.hidePopup} />
 
           </section>    
             );

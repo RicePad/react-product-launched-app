@@ -55,7 +55,7 @@ class App extends Component {
               <section className="container">
                 <ProductList productList={this.state.productList} />      
               </section>
-                                <Popup />
+                <Popup />
 
             </section>
             

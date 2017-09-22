@@ -4,14 +4,19 @@ import React, { Component } from 'react';
 class Popup extends Component {
   
    renderPopupContent(){
+       
+       return (
        <section className="popup">
         <section className="popup-wrap">
-            <img src="/images/close.png"/>
+            <img src="/images/close.png" onClick={this.props.hidePopup}/>
         </section>
         <section className="popup-content">
             <section> POPUP CONTENT SHOULD BE HERE</section>
         </section>
-       </section>;
+       </section>
+           );
+       
+      
        
    }
    
@@ -24,7 +29,12 @@ class Popup extends Component {
     render(){
         return(
             <section>
-                {this.renderPopupContent()}
+                {
+                
+                this.props.status? this.renderPopupContent() : null
+                    
+                    
+                }
             </section>
             );
         
@@ -33,3 +43,6 @@ class Popup extends Component {
 }
 
 export default Popup;
+
+
+

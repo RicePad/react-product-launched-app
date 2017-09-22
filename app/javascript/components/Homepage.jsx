@@ -6,7 +6,6 @@ class Homepage extends Component {
         return(
             
              <header>
-                             <Popup />
 
                     <img src="images/banner.jpeg" width="100%" />
 
