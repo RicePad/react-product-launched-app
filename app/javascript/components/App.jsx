@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import ProductList from './ProductList'
+import ProductList from './ProductList';
+import Homepage from './Homepage';
+import Navbar from './Navbar';
 
 class App extends Component {
    constructor(props){
@@ -44,16 +46,12 @@ class App extends Component {
     render(){
         return(
             <section>
-                <header>
-                    <img src="images/banner.jpeg" width="100%" />
-
-                    
-                </header>
+                 <Navbar />
+                 <Homepage />
               <section className="container">
                 <ProductList productList={this.state.productList} />      
               </section>
-                 
-           </section>
+            </section>
             
             
             );
