@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoginPopup from './LoginPopup';
 
 
 class Popup extends Component {
@@ -10,8 +11,8 @@ class Popup extends Component {
         <section className="popup-wrap">
             <img src="/images/close.png" onClick={this.props.hidePopup}/>
         </section>
-        <section className="popup-content">
-            <section> POPUP CONTENT SHOULD BE HERE</section>
+        <section className="popup-content login-popup">
+            <section> {this.props.children}</section>
         </section>
        </section>
            );
