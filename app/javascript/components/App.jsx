@@ -49,7 +49,7 @@ class App extends Component {
             
             <section>
 
-                 <Navbar />
+                 <Navbar user={true} />
 
                  <Homepage />
               <section className="container">
