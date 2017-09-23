@@ -56,9 +56,10 @@ class Navbar extends Component {
                 <section>
                     <span> 
                       <a onClick={this.showPopup} className="login-btn">POST</a>
+                      <ProfileMenu />
+
                     </span>
                       <PostPopup status={this.state.displayPopup} hidePopup={this.hidePopup} />
-                      <ProfileMenu />
                 </section>
                 :
                 
