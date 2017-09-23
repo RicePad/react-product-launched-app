@@ -17,7 +17,7 @@
  *= require_self
  */
  
- /*------------------------------ CUSTOM ------------------------------*/
+/*------------------------------ CUSTOM ------------------------------*/
 body {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 13px;
@@ -97,6 +97,12 @@ a {
 	border-radius: 50%;
 }
 
+.medium-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+}
+
 /*------------------------------ UPVOTE BUTTON ------------------------------*/
 .upvote-button {
 	font-weight: 600;
@@ -128,22 +134,19 @@ a {
 	font-weight: 500;
 	font-size: 11px;
 	display: block;
-	
 }
 
-.login-btn:hover{
+.login-btn:hover {
 	color: #da552f;
-	
 }
 
-.navbar{
+.navbar {
 	text-align: center;
 	padding: 10px 10px 5px;
 }
 
-.navbar .left-side{
+.navbar .left-side {
 	float: left;
-	
 }
 
 .navbar .left-side .product-search {
@@ -161,19 +164,16 @@ a {
 
 .navbar .right-side {
 	float: right;
-	
 }
 
-.navbar .right-side section > * {
+.navbar .right-side span > * {
 	display: inline-block;
 	vertical-align: middle;
-	margin-left: 15px;
-	
+	margin-left: 10px;
 }
 
-.navbar .right-side a:hover{
+.navbar .right-side a:hover {
 	color: #da552f;
-	
 }
 
 
@@ -199,7 +199,7 @@ a {
 	position: fixed;
 }
 
-button{
+button {
 	border-radius: 20px;
 	padding: 8px 20px;
 	font-size: 13px;
@@ -220,14 +220,13 @@ button:hover {
 	transform: translate(-50%,-50%);
 }
 
-.facebook-btn{
+.facebook-btn {
 	color: white;
 	background-color: #3b5998;
 	margin: 20px;
 }
 
-/*------------------------------ POSTPOPUP ------------------------------*/
-
+/* POST POPUP */
 .post-popup {
 	width: 90%;
 	right: 0;
