@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Popup from './Popup';
 import LoginPopup from './LoginPopup';
 import PostPopup from './PostPopup';
+import ProfileMenu from './ProfileMenu';
 
 
 class Navbar extends Component {
@@ -57,6 +58,7 @@ class Navbar extends Component {
                       <a onClick={this.showPopup} className="login-btn">POST</a>
                     </span>
                       <PostPopup status={this.state.displayPopup} hidePopup={this.hidePopup} />
+                      <ProfileMenu />
                 </section>
                 :
                 
