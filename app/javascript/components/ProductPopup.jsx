@@ -16,7 +16,21 @@ class ProductPopup extends Component {
           name: 'leo',
           avatar: '/images/myself.jpg'
         }
-      }
+      },
+      comments: [
+          {
+            name: "Jon",
+            avatar: "/images/myself.jpg",
+            content: "I love this product and myself"
+          },
+          {
+            name: "Johnny",
+            avatar: "images/hieu.jpeg",
+            content: "I love this product and Jon"
+            
+              
+          }
+          ]
     };
   }
   
@@ -55,6 +69,7 @@ class ProductPopup extends Component {
                     <img className="medium-avatar" src="/images/myself.jpg"/>
                     <input placeholder="What do you think of this product?" />
                 </section>
+                {this.renderComment()}
             </section>
         );     
        
@@ -70,7 +85,29 @@ class ProductPopup extends Component {
             );
     }
     
-    render
+    renderComment(){
+        return(
+            <ul className="comment-list">
+                {
+                    this.state.comments.map(function(comment, id) {
+                        return(
+                        <li key={id}>
+                            <img className="medium-avatar" src={comment.avatar}/>
+                            <section>
+                                <strong>{comment.name}</strong>
+                                <p>{comment.content}</p>
+                            </section>
+                        </li>
+                        );
+                        
+                    })
+                    
+                }
+            
+            </ul>
+            );    
+        
+    }
 
     
     render(){
